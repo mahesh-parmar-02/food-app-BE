@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "11d66549-a38c-45a5-a456-94aa54d8b2ec",
+		"name": "foodOrdering",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36497494"
+	},
+	"item": [
+		{
+			"name": "/products/bulkLoad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"description\":\"Tomato\",\r\n    \"categoryId\" : 1,\r\n    \"categoryName\": \"Vegitables\",\r\n    \"price\": 20,\r\n    \"unit\": \"KG\",\r\n    \"qty\": 10\r\n},\r\n{\r\n    \"description\":\"Meat\",\r\n    \"categoryId\" : 2,\r\n    \"categoryName\": \"Meat\",\r\n    \"price\": 200,\r\n    \"unit\": \"KG\",\r\n    \"qty\": 12\r\n},\r\n{\r\n    \"description\":\"Tomato2\",\r\n    \"categoryId\" : 1,\r\n    \"categoryName\": \"Vegitables\",\r\n    \"price\": 25,\r\n    \"unit\": \"KG\",\r\n    \"qty\": 10\r\n},\r\n{\r\n    \"description\":\"Meat2\",\r\n    \"categoryId\" : 2,\r\n    \"categoryName\": \"Meat\",\r\n    \"price\": 250,\r\n    \"unit\": \"KG\",\r\n    \"qty\": 10\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/products/bulkLoad"
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9090/products"
+			},
+			"response": []
+		},
+		{
+			"name": "/products/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9090/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/products/category/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9090/products/category/"
+			},
+			"response": []
+		},
+		{
+			"name": "/users/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "/users/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/users/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/cart/example@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/clear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/cart/add?email=example@example.com&itemId=1&quantity=1",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"cart",
+						"add"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "example@example.com"
+						},
+						{
+							"key": "itemId",
+							"value": "1"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/add Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/cart/add?email=example@example.com&itemId=1&quantity=1",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"cart",
+						"add"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "example@example.com"
+						},
+						{
+							"key": "itemId",
+							"value": "1"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/orders/place",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/orders/example@example.com"
+			},
+			"response": []
+		},
+		{
+			"name": "/orders/place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplePassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/orders/place?email=example@example.com&totalAmount=1000",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"orders",
+						"place"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "example@example.com"
+						},
+						{
+							"key": "totalAmount",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "testuser",
+			"value": "example@example.com"
+		},
+		{
+			"key": "testpassword",
+			"value": "examplePassword"
+		}
+	]
+}
